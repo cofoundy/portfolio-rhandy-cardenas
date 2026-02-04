@@ -6,7 +6,7 @@ export const siteConfig = {
   social: {
     email: "rhandy.cardenas-curo@hds.utc.fr",
     linkedin: "https://linkedin.com/in/rhandy-cardenas",
-    github: "",
+    github: "https://github.com/RhandyC",
   },
   aboutMe:
     "3rd-year PhD student passionate about research and the automotive industry. I'm developing tactical decision-making systems to guarantee safe operation of ADAS within Operational Design Domains (ODD) at Renault Group and Heudiasyc UTC laboratory. My research combines control theory, robotics, and machine learning for intelligent vehicles. Originally from Peru, now based in France.",
@@ -45,6 +45,13 @@ export const siteConfig = {
         "Assessing decisional capability for ODD-compliant automatic lane change using Sense-Think-Act paradigm. Published at IFAC IAV Symposium 2025, Phoenix, USA.",
       link: "",
       skills: ["Control Systems", "ADAS", "SIL/VIL Testing"],
+    },
+    {
+      name: "Fuzzy System for CARLA",
+      description:
+        "Tactical driving of vehicles using a fuzzy logic system for decision-making in the CARLA autonomous driving simulator. Open-source implementation.",
+      link: "https://github.com/RhandyC/FuzzySystemCarla",
+      skills: ["Python", "Fuzzy Logic", "CARLA", "Decision-Making"],
     },
   ],
   experience: [
