@@ -1,0 +1,48 @@
+# DecapBridge PKCE auth configured
+backend:
+  name: git-gateway
+  repo: cofoundy/blog-elias-munayco
+  branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/58699432-098a-4102-94c2-93d2b1148a35/pkce
+  auth_token_endpoint: /sites/58699432-098a-4102-94c2-93d2b1148a35/token
+  gateway_url: https://gateway.decapbridge.com
+
+# See who did what (optional)
+commit_messages:
+  create: Create {{collection}} "{{slug}}" - {{author-name}} via DecapBridge
+  update: Update {{collection}} "{{slug}}" - {{author-name}} via DecapBridge
+  delete: Delete {{collection}} "{{slug}}" - {{author-name}} via DecapBridge
+  uploadMedia: Upload "{{path}}" - {{author-name}} via DecapBridge
+  deleteMedia: Delete "{{path}}" - {{author-name}} via DecapBridge
+
+# Enable PKCE fields
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+# Better Decap + Bridge logo
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# Site URL
+site_url: https://cofoundy.github.io/blog-elias-munayco
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "string" }
+      - { label: "Fecha de Publicación", name: "pubDate", widget: "datetime" }
+      - { label: "Fecha de Actualización", name: "updatedDate", widget: "datetime", required: false }
+      - { label: "Imagen Principal", name: "heroImage", widget: "image", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
