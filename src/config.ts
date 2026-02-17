@@ -49,6 +49,20 @@ export const siteConfig = {
   ],
   academicProjects: [
     {
+      name: "UTAC Challenge 2024",
+      description:
+        "Mentored the UTC student team during the UTC Challenge 2024, the first European competition in a real-world environment dedicated to autonomous and connected mobility. Supervised the development of the 'UTonome On Demand' (UTOD) system using CARLA and MATLAB for simulation. Results: 2nd place (Open Category) and Best School Award.",
+      link: "",
+      skills: ["CARLA", "MATLAB", "Autonomous Driving", "Mentoring"],
+    },
+    {
+      name: "National IUT Robotics Competition",
+      description:
+        "Fabrication d'un robot autonome capable de simuler un match de tennis. Mission : conception et fabrication du châssis sous SolidWorks (impr. 3D), programmation et conception de cartes électroniques.",
+      link: "",
+      skills: ["SolidWorks", "3D Printing", "Electronics", "Robotics"],
+    },
+    {
       name: "Fuzzy System for CARLA",
       description:
         "Tactical driving of vehicles using a fuzzy logic system for decision-making in the CARLA autonomous driving simulator. Open-source implementation.",
