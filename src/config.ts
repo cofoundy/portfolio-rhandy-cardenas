@@ -24,28 +24,30 @@ export const siteConfig = {
     "Git",
     "LabVIEW"
   ],
-  projects: [
+  publications: [
     {
-      name: "IEEE TIV Survey Paper",
-      description:
-        "Context-aware and Reliable Long-term Decision-Making for Safe Intelligent Vehicles: A comprehensive survey published in IEEE Transactions on Intelligent Vehicles (2024).",
+      title: "Context-Aware and Reliable Long-Term Decision-Making for Safe Intelligent Vehicles: A Survey",
+      authors: "R. P. Cardenas, L. Adouane, C. Zinoune and M. A. Benloucif",
+      venue: "in IEEE Transactions on Intelligent Vehicles, doi: 10.1109/TIV.2024.3524881",
       link: "https://doi.org/10.1109/TIV.2024.3524881",
-      skills: ["Survey", "Decision-Making", "ADAS", "Safety"],
+      keywords: ["Survey", "Decision-Making", "ODD", "Safety"],
     },
     {
-      name: "ODD-based Decision-Making",
-      description:
-        "Long-term decision-making framework for intelligent vehicles operating within Operational Design Domains. Presented at IEEE IV Symposium 2025, Cluj-Napoca, Romania.",
-      link: "",
-      skills: ["ROS 2", "Python", "Autonomous Vehicles"],
+      title: "ODD-based long-term decision-making for intelligent vehicles",
+      authors: "R. P. Cardenas Curo, L. Adouane, C. Zinoune and M. A. Benloucif",
+      venue: "Proc. IEEE Intell. Vehicles Symp. (IV), Cluj-Napoca, Romania, 22–25 June 2025",
+      link: "https://ieeexplore.ieee.org/document/11097482/",
+      keywords: ["ODD", "Decision-making", "Markov Decision Process"],
     },
     {
-      name: "Automatic Lane Change System",
-      description:
-        "Assessing decisional capability for ODD-compliant automatic lane change using Sense-Think-Act paradigm. Published at IFAC IAV Symposium 2025, Phoenix, USA.",
-      link: "",
-      skills: ["Control Systems", "ADAS", "SIL/VIL Testing"],
+      title: "Assessing the decisional capability for an ODD-compliant automatic lane change system via Sense–Think–Act paradigm",
+      authors: "R. P. Cardenas Curo, L. Adouane, C. Zinoune and M. A. Benloucif",
+      venue: "Proc. 12th IFAC Symp. Intell. Autonomous Vehicles (IAV), Phoenix, AZ, USA, 7–9 May 2025",
+      link: "https://www.sciencedirect.com/science/article/pii/S2405896325003672",
+      keywords: ["ODD", "Capability Assessment", "Skill Graph"],
     },
+  ],
+  academicProjects: [
     {
       name: "Fuzzy System for CARLA",
       description:

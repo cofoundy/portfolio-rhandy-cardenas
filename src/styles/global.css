@@ -26,4 +26,15 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   background-color: var(--bg);
   color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal overflow on mobile */
+section {
+  max-width: 100vw;
+  overflow-x: hidden;
 }

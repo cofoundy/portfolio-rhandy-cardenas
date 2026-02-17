@@ -1,27 +1,28 @@
 ---
 import { siteConfig } from "../config";
-const hasPublications = siteConfig.publications && siteConfig.publications.length > 0;
+const hasAcademicProjects =
+  siteConfig.academicProjects && siteConfig.academicProjects.length > 0;
 ---
 
 {
-  hasPublications && (
-    <section id="publications" class="py-24 px-6 bg-[#0a0f1e]">
+  hasAcademicProjects && (
+    <section id="academic-projects" class="py-24 px-6 bg-[#0f1729]">
       <div class="max-w-5xl mx-auto">
         <!-- Section header -->
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold text-[#e2e8f0] mb-4">
-            Publications
+            Academic Projects
           </h2>
           <div class="w-24 h-1 bg-[#3b82f6] mx-auto rounded-full" />
         </div>
 
-        <!-- Publications list -->
-        <div class="space-y-6">
-          {siteConfig.publications.map((pub, index) => {
-            const Component = pub.link ? "a" : "div";
-            const linkProps = pub.link
+        <!-- Projects grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {siteConfig.academicProjects.map((project, index) => {
+            const Component = project.link ? "a" : "div";
+            const linkProps = project.link
               ? {
-                  href: pub.link,
+                  href: project.link,
                   target: "_blank",
                   rel: "noopener noreferrer",
                 }
@@ -31,18 +32,18 @@ const hasPublications = siteConfig.publications && siteConfig.publications.lengt
               <Component
                 {...linkProps}
                 class={`group block relative p-8 bg-[#1a1f2e] border border-[#334155] rounded-xl transition-all duration-300 ${
-                  pub.link
+                  project.link
                     ? "hover:border-[#3b82f6] hover:shadow-lg hover:shadow-[#3b82f6]/10 cursor-pointer"
                     : ""
                 }`}
               >
                 {/* Number badge */}
                 <div class="absolute -left-3 -top-3 w-10 h-10 flex items-center justify-center bg-[#3b82f6] rounded-lg text-[#0a0f1e] font-bold text-lg shadow-lg">
-                  {String(index + 1).padStart(2, '0')}
+                  {String(index + 1).padStart(2, "0")}
                 </div>
 
                 {/* Link icon */}
-                {pub.link && (
+                {project.link && (
                   <div class="absolute top-6 right-6 text-[#64748b] group-hover:text-[#60a5fa] transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -65,21 +66,20 @@ const hasPublications = siteConfig.publications && siteConfig.publications.lengt
                 <div class="space-y-4">
                   {/* Title */}
                   <h3 class="text-2xl font-bold text-[#e2e8f0] pr-8 group-hover:text-[#60a5fa] transition-colors">
-                    {pub.title}
+                    {project.name}
                   </h3>
 
-                  {/* Authors and Venue */}
+                  {/* Description */}
                   <p class="text-[#94a3b8] leading-relaxed">
-                    <strong>{pub.authors}</strong>,<br />
-                    {pub.venue}
+                    {project.description}
                   </p>
 
-                  {/* Keywords */}
-                  {pub.keywords && pub.keywords.length > 0 && (
+                  {/* Tags/Skills */}
+                  {project.skills && project.skills.length > 0 && (
                     <div class="flex flex-wrap gap-2 pt-2">
-                      {pub.keywords.map((keyword) => (
+                      {project.skills.map((skill) => (
                         <span class="px-3 py-1 bg-[#141824] border border-[#334155] text-[#94a3b8] rounded-md text-sm font-medium">
-                          {keyword}
+                          {skill}
                         </span>
                       ))}
                     </div>
